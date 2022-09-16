@@ -9,6 +9,8 @@ import { Employee } from './models/employee';
 export class AppComponent {
   title = 'angular-simple-crud';
 
+
+//Array for test
   employeeArray: Employee[] = [
     { id: 1, name: 'Ryan', country: 'USA' },
     { id: 2, name: 'Alex', country: 'UK' },
@@ -20,6 +22,7 @@ export class AppComponent {
     this.selectedEmployee = employee;
   }
 
+  //Function for add or edit
   addOrEdit() {
     if (this.selectedEmployee.id === 0) {
       this.selectedEmployee.id = this.employeeArray.length + 1;
@@ -29,6 +32,8 @@ export class AppComponent {
     this.selectedEmployee = new Employee();
   }
 
+
+  //function for delete
   delete() {
     if (confirm('Are you sure of this action?')) {
       this.employeeArray = this.employeeArray.filter(
