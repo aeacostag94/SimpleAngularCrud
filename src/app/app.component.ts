@@ -18,11 +18,13 @@ export class AppComponent {
 
   selectedEmployee: Employee = new Employee();
 
+
+  //function to show objects from Array.
   openEdit(employee: Employee) {
     this.selectedEmployee = employee;
   }
 
-  //Function for add or edit
+  //Function for add or edit 
   addOrEdit() {
     if (this.selectedEmployee.id === 0) {
       this.selectedEmployee.id = this.employeeArray.length + 1;
